@@ -1,0 +1,85 @@
+@import "variables";
+
+.depth
+{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    .header
+    {
+        z-index: 10;
+        display: flex;
+        color: #FFF;
+        font-size: 13px;
+        font-family: Inconsolata;
+        padding: 5px 10px;
+        line-height: 20px;
+        font-weight: 700;
+        -webkit-font-smoothing: antialiased;
+
+        .bids, .asks
+        {
+            flex: 1;
+        }
+
+        .market
+        {
+            width: 100px;
+            text-align: center;
+            font-size: 16px;
+
+            .label
+            {
+                font-size: 10px;
+                font-family: Roboto;
+                line-height: 12px;
+                color: #888;
+                font-weight: 500;
+                margin-top: 2px;
+            }
+        }
+
+        .asks
+        {
+            text-align: right;
+        }
+    }
+
+    .depth-chart
+    {
+        flex: 1;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .axis
+    {
+        pointer-events: none;
+
+        line, path
+        {
+            stroke: lighten(@pane-background-color, 20%);
+        }
+
+        text
+        {
+            fill: lighten(@pane-background-color, 40%);
+            font-weight: 700;
+            font-size: 11px;
+        }
+
+        &.y
+        {
+            path.domain, g.tick:last-child
+            {
+                display: none;
+            }
+        }
+    }
+
+    .zoomable
+    {
+        fill: transparent;
+    }
+}
