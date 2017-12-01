@@ -1,0 +1,23 @@
+{
+    "name": "depth",
+    "version": "0.0.0",
+    "description": "Depth chart.",
+    "main": "./lib/main",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "via",
+        "trading",
+        "depth",
+        "chart"
+    ],
+    "repository": "https://github.com/via-platform/depth",
+    "author": "Dakota Gordon",
+    "engines": {
+        "via": "*"
+    },
+    "dependencies": {
+        "underscore-plus": "^1.0.0"
+    }
+}
