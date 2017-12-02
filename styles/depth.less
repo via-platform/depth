@@ -1,4 +1,5 @@
 @import "variables";
+@import "ui-variables";
 
 .depth
 {
@@ -51,6 +52,51 @@
         flex: 1;
         width: 100%;
         overflow: hidden;
+
+        .areas
+        {
+            path
+            {
+                fill: fade(@primary-color, 15%);
+                stroke: @primary-color;
+                stroke-width: 1px;
+            }
+
+            path.asks
+            {
+                fill: fade(@background-color-error, 15%);
+                stroke: @background-color-error;
+            }
+        }
+
+        .crosshairs
+        {
+            rect.line, rect.label
+            {
+                fill: #AAA;
+            }
+
+            rect.text
+            {
+                fill: @pane-background-color;
+            }
+
+            text
+            {
+                font-size: 14px;
+                font-weight: 700;
+                font-family: Inconsolata;
+                fill: @primary-color;
+            }
+
+            .asks
+            {
+                text
+                {
+                    fill: @background-color-error;
+                }
+            }
+        }
     }
 
     .axis
