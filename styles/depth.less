@@ -18,10 +18,19 @@
         line-height: 20px;
         font-weight: 700;
         -webkit-font-smoothing: antialiased;
+        justify-content: center;
 
         .bids, .asks
         {
             flex: 1;
+            color: fade(#FFF, 40);
+            display: none;
+
+            span
+            {
+                margin: 0 8px;
+                color: #FFF;
+            }
         }
 
         .market
@@ -71,6 +80,8 @@
 
         .crosshairs
         {
+            display: none;
+
             rect.line, rect.label
             {
                 fill: #AAA;
@@ -89,9 +100,19 @@
                 fill: @primary-color;
             }
 
+            rect.value
+            {
+                fill: @primary-color;
+            }
+
             .asks
             {
                 text
+                {
+                    fill: @background-color-error;
+                }
+
+                rect.value
                 {
                     fill: @background-color-error;
                 }
@@ -124,8 +145,19 @@
         }
     }
 
-    .zoomable
+    &:hover
     {
-        fill: transparent;
+        .header
+        {
+            .bids, .asks
+            {
+                display: block;
+            }
+        }
+
+        .crosshairs
+        {
+            display: block;
+        }
     }
 }
