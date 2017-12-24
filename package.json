@@ -24,5 +24,12 @@
     "frame-throttle": "^3.0.0",
     "num-plus": "0.0.1",
     "underscore-plus": "^1.0.0"
+  },
+  "consumedServices": {
+    "action-bar": {
+      "versions": {
+        "^0.1.0": "consumeActionBar"
+      }
+    }
   }
 }
