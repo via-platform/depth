@@ -1,11 +1,14 @@
 @import "variables";
 @import "ui-variables";
 
+@depth-tools-height: 24px;
+
 .depth
 {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    background: @pane-content-background-color;
 
     .header
     {
@@ -158,6 +161,30 @@
         .crosshairs
         {
             display: block;
+        }
+    }
+
+    .depth-tools
+    {
+        height: @depth-tools-height + 1;
+        border-bottom: 1px solid @pane-border-color;
+        background: @pane-background-color;
+        display: flex;
+        align-items: center;
+
+        .btn
+        {
+            border-right: 1px solid @pane-border-color;
+            height: @depth-tools-height;
+            line-height: @depth-tools-height;
+            font-family: 'Inconsolata';
+            font-size: 13px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            max-width: 180px;
+            color: @text-color;
+            -webkit-font-smoothing: antialiased;
         }
     }
 }
