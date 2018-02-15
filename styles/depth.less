@@ -1,22 +1,20 @@
 @import "variables";
 @import "ui-variables";
 
-@depth-tools-height: 24px;
-
 .depth
 {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    background: @pane-content-background-color;
+    background: @pane-background-color;
 
     .header
     {
         z-index: 10;
         display: flex;
-        color: #FFF;
+        color: @text-color;
         font-size: 13px;
-        font-family: Inconsolata;
+        font-family: @font-family-serif;
         padding: 5px 10px;
         line-height: 20px;
         font-weight: 700;
@@ -26,13 +24,18 @@
         .bids, .asks
         {
             flex: 1;
-            color: fade(#FFF, 40);
+            color: fade(@text-color-subtle, 60%);
             display: none;
 
             span
             {
                 margin: 0 8px;
                 color: #FFF;
+
+                &:last-child
+                {
+                    margin-right: 0;
+                }
             }
         }
 
@@ -45,9 +48,9 @@
             .label
             {
                 font-size: 10px;
-                font-family: Roboto;
+                font-family: @font-family;
                 line-height: 12px;
-                color: #888;
+                color: @text-color-subtle;
                 font-weight: 500;
                 margin-top: 2px;
             }
@@ -85,14 +88,11 @@
         {
             display: none;
 
-            rect.line, rect.label
+            line
             {
-                fill: #AAA;
-            }
-
-            rect.text
-            {
-                fill: @pane-background-color;
+                stroke: #FFF;
+                stroke-width: 1px;
+                stroke-dasharray: 6;
             }
 
             text
@@ -105,22 +105,30 @@
 
             rect.value
             {
-                fill: @primary-color;
+                fill: #FFF;
             }
 
-            .asks
+            .flag
             {
-                text
+                rect
                 {
-                    fill: @background-color-error;
+                    fill: #FFF;
                 }
 
-                rect.value
+                text
                 {
-                    fill: @background-color-error;
+                    fill: #282828;
+                    font-size: 12px;
+                    font-weight: 700;
+                    font-family: @font-family-serif;
                 }
             }
         }
+    }
+
+    .footer
+    {
+        fill: @header-background-color;
     }
 
     .axis
@@ -129,14 +137,19 @@
 
         line, path
         {
-            stroke: lighten(@pane-background-color, 20%);
+            stroke: lighten(@header-border-color, 10%);
+        }
+
+        .domain
+        {
+            stroke: @header-border-color;
         }
 
         text
         {
-            fill: lighten(@pane-background-color, 40%);
+            fill: @text-color-subtle;
             font-weight: 700;
-            font-size: 11px;
+            font-size: 10px;
         }
 
         &.y
@@ -161,27 +174,6 @@
         .crosshairs
         {
             display: block;
-        }
-    }
-
-    .depth-tools
-    {
-        height: @depth-tools-height + 1;
-        align-items: center;
-
-        .btn
-        {
-            border-right: 1px solid @pane-border-color;
-            height: @depth-tools-height;
-            line-height: @depth-tools-height;
-            font-family: 'Inconsolata';
-            font-size: 13px;
-            font-weight: 700;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            max-width: 180px;
-            color: @text-color;
-            -webkit-font-smoothing: antialiased;
         }
     }
 }
