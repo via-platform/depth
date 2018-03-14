@@ -1,0 +1,11 @@
+'menu': [
+  {
+    'label': 'View'
+    'submenu': [
+      'label': 'Components'
+      'submenu': [
+        { 'label': 'Market Depth', 'command': 'depth:create-depth-chart' }
+      ]
+    ]
+  }
+]
