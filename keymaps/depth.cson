@@ -1,0 +1,14 @@
+'.depth':
+  'm': 'depth:change-market'
+
+'.platform-darwin .depth':
+  'cmd-=': 'depth:zoom-in'
+  'cmd-+': 'depth:zoom-in'
+  'cmd--': 'depth:zoom-out'
+  'cmd-_': 'depth:zoom-out'
+
+'.platform-win32 .depth, .platform-linux .depth':
+  'ctrl-=': 'depth:zoom-in'
+  'ctrl-+': 'depth:zoom-in'
+  'ctrl--': 'depth:zoom-out'
+  'ctrl-_': 'depth:zoom-out'
