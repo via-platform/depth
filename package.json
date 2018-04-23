@@ -1,6 +1,6 @@
 {
   "name": "depth",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "Depth chart.",
   "main": "./lib/main",
   "scripts": {
