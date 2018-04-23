@@ -17,6 +17,9 @@
   "engines": {
     "via": "*"
   },
+  "deserializers": {
+    "Depth": "deserialize"
+  },
   "dependencies": {
     "bintrees": "^1.0.2",
     "d3": "^4.12.0",
