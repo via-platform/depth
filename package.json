@@ -21,11 +21,8 @@
     "Depth": "deserialize"
   },
   "dependencies": {
-    "bintrees": "^1.0.2",
-    "d3": "^4.12.0",
     "etch": "^0.12.7",
     "frame-throttle": "^3.0.0",
-    "num-plus": "0.0.1",
     "underscore-plus": "^1.0.0"
   },
   "consumedServices": {
