@@ -7,24 +7,23 @@
     display: flex;
     flex-direction: column;
     background: @pane-background-color;
+    -webkit-font-smoothing: antialiased;
+    font-size: 11px;
 
     .header
     {
         z-index: 10;
         display: flex;
         color: @text-color;
-        font-size: 13px;
-        font-family: @font-family-serif;
         padding: 5px 10px;
         line-height: 20px;
         font-weight: 700;
-        -webkit-font-smoothing: antialiased;
         justify-content: center;
 
         .bids, .asks
         {
             flex: 1;
-            color: fade(@text-color-subtle, 60%);
+            color: @text-color-subtle;
             display: none;
 
             span
@@ -43,7 +42,7 @@
         {
             width: 100px;
             text-align: center;
-            font-size: 16px;
+            font-size: 14px;
 
             .label
             {
@@ -97,9 +96,7 @@
 
             text
             {
-                font-size: 14px;
                 font-weight: 700;
-                font-family: Inconsolata;
                 fill: @primary-color-up;
             }
 
@@ -119,9 +116,7 @@
                 text
                 {
                     fill: #282828;
-                    font-size: 12px;
                     font-weight: 700;
-                    font-family: @font-family-serif;
                 }
             }
         }
@@ -129,7 +124,7 @@
 
     .footer
     {
-        fill: @header-background-color;
+        fill: @pane-background-color;
     }
 
     .axis
@@ -138,7 +133,8 @@
 
         line, path
         {
-            stroke: lighten(@header-border-color, 10%);
+            // stroke: lighten(@header-border-color, 10%);
+            stroke: fade(@text-color-subtle, 40%);
         }
 
         .domain
@@ -149,8 +145,8 @@
         text
         {
             fill: @text-color-subtle;
-            font-weight: 700;
             font-size: 10px;
+            -webkit-font-smoothing: auto;
         }
 
         &.y
