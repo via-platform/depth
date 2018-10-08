@@ -14,3 +14,6 @@
   '.symbol-explorer .market': [
     {label: 'Open Depth Chart', command: 'depth:create-depth-chart'}
   ]
+  '.watchlist .market': [
+    {label: 'Open Depth Chart', command: 'depth:create-depth-chart'}
+  ]
